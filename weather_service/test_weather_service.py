@@ -5,6 +5,7 @@ class TestWeatherService(unittest.TestCase):
     def test_get_weather(self):
         service = WeatherService()
         data = service.get_weather('New York')
+        print(data)
         self.assertIn('temperature', data)
         self.assertIn('humidity', data)
 

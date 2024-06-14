@@ -17,7 +17,7 @@ class WeatherService:
 
         # Fetch new data
         try:
-            response = requests.get(f"https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=4523628bd365a0c61f43c9ba0c9cd1ff")
+            response = requests.get(f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid=4523628bd365a0c61f43c9ba0c9cd1ff&units=imperial')
             response.raise_for_status()
             data = response.json()
             weather_data = {
